@@ -59,6 +59,24 @@ prediccion-calidad-vino-ml/
 
 ## ▶️ Cómo ejecutar el notebook
 
+El notebook se desarrolló y ejecutó originalmente en **Google Colab**, aunque también puede ejecutarse en local con Jupyter.
+
+### Opción A — Google Colab (recomendada)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/IvanCalvoBenito/prediccion-calidad-vino-ml/blob/main/notebook/Trabajo_final.ipynb)
+
+1. Abre el notebook con el botón de arriba (o desde Colab: *Archivo → Abrir notebook → GitHub* y busca este repositorio).
+2. Colab ya trae preinstaladas pandas, numpy, matplotlib, seaborn, scikit-learn y scipy, así que no hace falta instalar nada.
+3. Sube `wine_quality.csv` a la sesión de Colab (icono de carpeta → *Subir*) o cárgalo directamente desde el repositorio con:
+   ```python
+   import pandas as pd
+   url = "https://raw.githubusercontent.com/IvanCalvoBenito/prediccion-calidad-vino-ml/main/data/wine_quality.csv"
+   wine = pd.read_csv(url)
+   ```
+   Ajusta la celda de carga de datos (`DATA_PATH`) según la opción elegida.
+
+### Opción B — Entorno local con Jupyter
+
 ```bash
 git clone https://github.com/IvanCalvoBenito/prediccion-calidad-vino-ml.git
 cd prediccion-calidad-vino-ml
@@ -66,7 +84,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn scipy jupyter
 jupyter notebook notebook/Trabajo_final.ipynb
 ```
 
-> El notebook está preparado para ejecutarse con `wine_quality.csv` accesible desde la ruta configurada en la celda de carga de datos.
+> En local, el notebook está preparado para ejecutarse con `wine_quality.csv` accesible desde la ruta configurada en la celda de carga de datos (por defecto, `data/wine_quality.csv`).
 
 ## 📚 Fuente de los datos
 
@@ -75,5 +93,12 @@ jupyter notebook notebook/Trabajo_final.ipynb
 
 El fichero `wine_quality.csv` corresponde a la versión proporcionada por el profesorado de la asignatura, que une los dos conjuntos originales de UCI (vino blanco y vino tinto).
 
+## 👤 Autor
+
+**Iván Calvo Benito**
+Doble Grado en Ingeniería Informática y Estadística — Universidad de Salamanca
+[GitHub](https://github.com/IvanCalvoBenito) · [LinkedIn](https://www.linkedin.com/in/iván-calvo-benito-8ab7a4431)
+
+---
 
 *Este repositorio se publica con fines académicos y de portfolio personal.*
