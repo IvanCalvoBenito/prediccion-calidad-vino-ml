@@ -67,13 +67,14 @@ El notebook se desarrolló y ejecutó originalmente en **Google Colab**, aunque 
 
 1. Abre el notebook con el botón de arriba (o desde Colab: *Archivo → Abrir notebook → GitHub* y busca este repositorio).
 2. Colab ya trae preinstaladas pandas, numpy, matplotlib, seaborn, scikit-learn y scipy, así que no hace falta instalar nada.
-3. Sube `wine_quality.csv` a la sesión de Colab (icono de carpeta → *Subir*) o cárgalo directamente desde el repositorio con:
-   ```python
-   import pandas as pd
-   url = "https://raw.githubusercontent.com/IvanCalvoBenito/prediccion-calidad-vino-ml/main/data/wine_quality.csv"
-   wine = pd.read_csv(url)
-   ```
-   Ajusta la celda de carga de datos (`DATA_PATH`) según la opción elegida.
+3. Sube `wine_quality.csv` a la sesión de Colab (icono de carpeta → *Subir*). Como el notebook usa `DATA_PATH = "wine_quality.csv"`, no hace falta modificar ninguna celda.
+
+**Alternativa (opcional):** en lugar de subir el archivo, puedes cargarlo directamente desde el repositorio editando la celda de carga de datos:
+```python
+import pandas as pd
+url = "https://raw.githubusercontent.com/IvanCalvoBenito/prediccion-calidad-vino-ml/main/data/wine_quality.csv"
+wine = pd.read_csv(url)
+```
 
 ### Opción B — Entorno local con Jupyter
 
